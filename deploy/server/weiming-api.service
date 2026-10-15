@@ -1,0 +1,26 @@
+[Unit]
+Description=Weiming knowledge and conversation API (private loopback)
+After=network-online.target weiming-ollama.service
+Wants=network-online.target weiming-ollama.service
+
+[Service]
+Type=simple
+WorkingDirectory=%h/services/weiming/project
+ExecStart=%h/services/weiming/venv/bin/python -u -m federation.app --port 18732
+Environment=PATH=%h/services/weiming/bin/node-v24.18.0-linux-x64/bin:%h/services/weiming/bin:%h/services/weiming/venv/bin:/usr/local/bin:/usr/bin:/bin
+Environment=TZ=Asia/Shanghai
+Environment=LANG=C.UTF-8
+Environment=PYTHONUNBUFFERED=1
+Environment=OPENWIKI_TELEMETRY_DISABLED=1
+Environment=DO_NOT_TRACK=1
+Environment=LANGCHAIN_TRACING_V2=false
+Environment=LANGSMITH_TRACING=false
+EnvironmentFile=%h/services/weiming/runtime.env
+EnvironmentFile=-%h/services/weiming/learning.env
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=45
+UMask=0077
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "bilibili",
+    "repository": "https://github.com/L-Chris/bilibili-mcp",
+    "commit": "279cb9c86e0ded94500a8b1a0e8a4f540ecc907d",
+    "source": ".runtime/platform-mcp/sources/bilibili",
+    "bytes": 22659
+  },
+  {
+    "id": "douyin-reader",
+    "repository": "https://github.com/pazwusimple-netizen/douyin-mcp",
+    "commit": "ab9eb3b36cd47e9091e520f9a5faabf72f1f16e4",
+    "source": ".runtime/platform-mcp/sources/douyin-reader",
+    "bytes": 251209
+  },
+  {
+    "id": "douyin-openapi",
+    "repository": "https://github.com/LIghtJUNction/douyin",
+    "commit": "c70a41e6a8007c09c9d955548f7ab63f25b26df1",
+    "source": ".runtime/platform-mcp/sources/douyin-openapi",
+    "bytes": 111580
+  },
+  {
+    "id": "mediacrawler-mcp",
+    "repository": "https://github.com/xwh-01/dsh-mediacrawler",
+    "commit": "22fd327dc47ad2c40461b0d60b3f6f63f5d5446b",
+    "source": ".runtime/platform-mcp/sources/mediacrawler-mcp",
+    "bytes": 67900
+  },
+  {
+    "id": "mediacrawler",
+    "repository": "https://github.com/NanmiCoder/MediaCrawler",
+    "commit": "e9dd17a16338c3915f2335bc609383d316e055f2",
+    "source": ".runtime/platform-mcp/sources/mediacrawler",
+    "bytes": 18470427
+  }
+]

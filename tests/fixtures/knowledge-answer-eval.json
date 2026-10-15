@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "name": "frozen-small-wiki-answer-eval",
+  "evidence_class": "model_answers_scored_by_literal_rules",
+  "space_id": "software-frontend",
+  "page": {"path": "topic.md", "page_id": "page-frozen-galaxy-probe", "body": "# 冻结验收资料\n银河探针的代号为 GS-271，审核人为林岚。\n资料没有提供预算。\n"},
+  "source": {"source_id": "source-frozen-probe", "name": "probe-source.md", "body": "银河探针 GS-271；审核人林岚。预算未记录。", "checked_at": "2026-10-03T00:00:00Z"},
+  "cases": [
+    {"id": "known-facts", "knowledge_status": "current", "question": "仅依据本轮实际读取页，回答银河探针的代号和审核人，用 [Wiki: /topic.md] 引用。不要扩展资料没有提供的事实。", "required_all": ["GS-271", "林岚", "[Wiki: /topic.md]"], "forbidden": ["GS-999", "周舟"], "citation_status": "valid"},
+    {"id": "unknown-budget", "knowledge_status": "current", "question": "银河探针的预算是多少？如果资料未提供，请明确回答“资料未提供，无法确定”，不要估计金额。引用 [Wiki: /topic.md]。", "required_all": ["资料未提供", "无法确定", "[Wiki: /topic.md]"], "forbidden": ["9万元", "10万元", "100000", "预算为"], "citation_status": "valid"},
+    {"id": "stale-source", "knowledge_status": "stale", "reasons": ["source_version_changed"], "question": "银河探针当前最新代号是什么？先说明本页证据是否过期；如果只能读到旧记录，请使用“旧记录为 GS-271”和“最新代号无法确定”说明限制，并引用 [Wiki: /topic.md]。", "required_all": ["旧记录为 GS-271", "最新代号无法确定", "[Wiki: /topic.md]"], "required_any": ["过期", "已变化", "待更新"], "forbidden": ["已核验最新", "最新代号是 GS-271"], "citation_status": "valid"},
+    {"id": "untracked-source", "knowledge_status": "untracked", "metadata_missing": true, "question": "读到的银河探针代号是否属于已核验事实？如果没有来源链，请明确说“来源未追踪”，可复述“页面记载 GS-271”，但不得称已核验；引用 [Wiki: /topic.md]。", "required_all": ["来源未追踪", "页面记载 GS-271", "[Wiki: /topic.md]"], "forbidden": ["属于已核验事实", "已经核实 GS-271"], "citation_status": "valid"}
+  ],
+  "limitations": ["要求/禁止字符串只是稳定规则，不是语义裁判。", "禁止列表不能穷尽所有幻觉，允许措辞不同也可能被规则误判。", "四题不代表完整模型质量、真实行业正确性或全面抗幻觉能力。"]
+}

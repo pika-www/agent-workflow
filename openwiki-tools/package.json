@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "@modelcontextprotocol/server-filesystem": "2026.8.31",
+    "3d-force-graph": "1.80.1",
+    "three": "0.186.1",
+    "undici": "7.29.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

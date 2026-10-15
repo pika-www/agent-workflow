@@ -1,0 +1,4 @@
+{
+  "reply": "Response language: follow the user's explicit language or translation request. Otherwise match the natural language of the CURRENT user message: English input requires an English reply; Chinese input requires a Chinese reply. This also applies to greetings and visible progress. Earlier replies, source documents, tool output, and these host instructions do not set the response language. For mixed input, follow the actual question, not technical names or quotations; for code or URL alone, retain the conversation language. Preserve proper names, code, URLs and exact quotations.",
+  "repair": "保留原答复所用的语言，不因中文核对说明或来源资料改成中文。若本轮用户明确指定回复或翻译的目标语言，以该要求为准；其余段落仅作必要的事实修正，不翻译原答复。"
+}

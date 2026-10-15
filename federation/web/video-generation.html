@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>视频接口 · 未明</title>
+  <link rel="stylesheet" href="/video-generation/video-generation.css">
+  <script defer src="/video-generation/video-generation.js"></script>
+</head>
+<body>
+<main>
+  <header><a href="/">← 返回未明</a><h1>视频接口设置</h1><p>在对话输入框选择“生成视频”，输入描述后发送。消息文字直接作为提示词，其他参数沿用工作流预设。</p></header>
+  <p id="page-status" role="status">正在读取连接配置…</p>
+  <details id="connection"><summary>连接与启用</summary>
+    <form id="connection-form">
+      <label class="check"><input id="enabled" type="checkbox">启用视频接口</label>
+      <label>生成服务 BASE_URL<input id="base-url" type="url" placeholder="http://生成服务地址:3000" autocomplete="off"><small>填写接入文档对应的 HTTP 地址。SSH 地址和视频接收地址不填在这里。</small></label>
+      <label>API Key（可选）<input id="api-key" type="password" autocomplete="new-password" placeholder="不需要鉴权可留空"><small id="key-state">凭据仅保存在服务器，留空保留已有密钥。</small></label>
+      <label class="check"><input id="clear-key" type="checkbox">清除已保存的 API Key</label>
+      <label>默认工作流<select id="default-workflow"></select></label>
+      <button type="submit" id="save-config">保存连接配置</button><p id="config-status" role="status"></p>
+    </form>
+  </details>
+  <p><a href="/">返回对话，选择“生成视频” →</a></p>
+  <section aria-labelledby="history-heading"><div class="section-title"><h2 id="history-heading">提交记录</h2><button id="refresh-jobs" type="button">刷新记录</button></div>
+    <p class="hint">此处保留实际提交回执。收到任务 ID 表示已接收提示词；视频生成和上传由外部工作流完成。</p>
+    <div id="job-list" aria-live="polite"><p>正在读取记录…</p></div>
+  </section>
+</main>
+</body>
+</html>

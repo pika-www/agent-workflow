@@ -1,0 +1,18 @@
+Asset: 未明知识观测站首页星球仪主视觉
+Generation method: built-in image_gen.imagegen; generated from text without references; transparent_background=false.
+Original generated image: /Users/winfield/.codex/generated_images/01a10a16-dec1-7892-b2cd-bc2a9b0e560a/exec-f83dd76f-d74e-4b48-ba5f-1d3e1d221b0e.png
+Workspace original: federation/web/assets/observatory-astrolabe-v2.png
+Web derivative: federation/web/assets/observatory-astrolabe-v2.jpg
+Derivative method: sips -s format jpeg -s formatOptions 82 observatory-astrolabe-v2.png --out observatory-astrolabe-v2.jpg
+Original and derivative dimensions: 1672 x 941
+
+Full prompt:
+Use case: stylized-concept
+Asset type: Premium editorial website hero artwork for a mysterious knowledge observatory.
+Primary request: A wide cinematic still life of a single enigmatic celestial astrolabe: one large physically solid, near-black obsidian and aged bronze spherical planet wrapped in two or three extraordinarily thin brushed brass orbital rings at asymmetric inclinations. The rings must appear crafted, dimensional, and elegant; a sculptural artifact in a contemporary architectural gallery, not a wireframe diagram.
+Scene/backdrop: Seamless almost-black charcoal background around #171b19, very dark muted moss undertone, generous clean empty margins. No visible horizon or plinth. A few extremely subtle dust particles only.
+Composition/framing: Landscape 16:9. Subject centered around 69 percent of image width and 50 percent of height, occupying the right two thirds. Keep the left 38 percent deeply dark and largely empty for web headline overlay. Entire sphere and ring silhouette comfortably within frame, with clear breathing room. Refined high-end product photography perspective.
+Style/medium: Beautiful physically realistic 3D render with convincing depth and material tactility, luxurious art-directed editorial image, understated restraint and quiet mystery.
+Lighting/mood: Warm light grazing from the upper left, thin champagne-gold rim light along the planet, soft deep shadows, a subtle luminous reflection on the brass. Sophisticated chiaroscuro. Clear spherical volume, surface mostly dark.
+Materials/textures: Fine mineral pitting on dark obsidian, delicate brushed metal texture on muted champagne brass orbital bands; museum-quality sculptural detail.
+Constraints: No text, no lettering, no logo, no watermark, no UI. No purple or blue, no neon, no busy starscape, no nebula, no rainbow effects, no glowing digital lines, no clutter, no extraneous objects.

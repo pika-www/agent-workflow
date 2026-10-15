@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/boy-373/hot-trending-mcp",
+  "commit": "2e1dea10ded20c502e3bec4fedf52b81c40dd055",
+  "files": {
+    "hot_mcp_server.py": "974e8122a5f63390bbd759f84743f6886c2ff190e079d2ea009288d3d4fdbe2a",
+    "platform_names.json": "807b1adffadee2d609b229d4d8856aa3133597e20c1b972c61a0fb96aa4d687b",
+    "LICENSE": "5dc9a9cbf3056f2f686fe22f91c3ad6c498d9fa05460f77f2f9431c04673c5d8"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "space_id": "software-frontend",
+  "page": {"path": "topic.md", "page_id": "page-frozen-galaxy-probe", "body": "# 冻结验收资料\n银河探针的代号为 GS-271，审核人为林岚。\n"},
+  "source": {"source_id": "source-frozen-probe", "name": "probe-source.md", "body": "银河探针 GS-271；审核人林岚。", "checked_at": "2026-10-03T00:00:00Z"},
+  "cases": [
+    {"id": "current-grounded-page", "mutation": "none", "expected_status": "current", "expected_sources": 1},
+    {"id": "source-new-version", "mutation": "source_new_version", "expected_status": "stale", "expected_reason": "source_version_changed", "expected_sources": 1},
+    {"id": "unknown-lineage", "mutation": "metadata_missing", "expected_status": "untracked", "expected_reason": "knowledge_metadata_unavailable", "expected_sources": 0},
+    {"id": "page-version-tampered", "mutation": "page_version_mismatch", "expected_status": "untracked", "expected_reason": "page_version_mismatch", "expected_sources": 0},
+    {"id": "metadata-pin-tampered", "mutation": "metadata_pin_tampered", "expected_status": "untracked", "expected_reason": "metadata_hash_mismatch", "expected_sources": 0},
+    {"id": "cross-space-metadata", "mutation": "cross_space", "expected_status": "untracked", "expected_reason": "metadata_space_mismatch", "expected_sources": 0},
+    {"id": "cross-space-source", "mutation": "source_cross_space", "expected_status": "untracked", "expected_reason": "knowledge_metadata_invalid", "expected_sources": 0},
+    {"id": "unknown-freshness", "mutation": "source_check_unknown", "expected_status": "review_due", "expected_reason": "source_freshness_not_verified", "expected_sources": 1},
+    {"id": "truncated-page", "mutation": "long_page", "expected_status": "current", "expected_sources": 1, "expected_truncated": true},
+    {"id": "valid-citation", "mutation": "none", "expected_status": "current", "expected_sources": 1, "answer": "代号为 GS-271。[Wiki: /topic.md]", "expected_citation_status": "valid"},
+    {"id": "unrecorded-citation", "mutation": "none", "expected_status": "current", "expected_sources": 1, "answer": "代号为 GS-271。[Wiki: /missing.md]", "expected_citation_status": "invalid"},
+    {"id": "no-citation-is-not-validated", "mutation": "none", "expected_status": "current", "expected_sources": 1, "answer": "这是一般说明。", "expected_citation_status": "no_citations"}
+  ]
+}

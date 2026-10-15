@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {consultationTools} from '../federation/native-agent.mjs';
+import {exclusiveRequestedTool} from '../federation/tool-scope.mjs';
+const options={executeTool:async()=>{},toolPolicy:{tools_enabled:true,network_allowed:true}};
+assert.deepEqual(consultationTools({...options,currentQuestion:'只调用 profit_calculate 计算利润，不联网。'}),['profit_calculate']);
+assert.equal(exclusiveRequestedTool('只使用工具 `profit_calculate`。'),'profit_calculate');
+assert(consultationTools({...options,currentQuestion:'计算利润并查找市场资料'}).includes('web_search'));
+assert(!consultationTools({...options,currentQuestion:'只调用 nonexistent_tool'}).includes('nonexistent_tool'));
+assert.equal(exclusiveRequestedTool('只调用 file_read，然后只调用 web_read'),null);
+assert.deepEqual(consultationTools({currentQuestion:'只调用 profit_calculate'}),[]);
+console.log('Explicit tool scope narrows existing permissions without granting tools.');

@@ -1,0 +1,10 @@
+{
+  "weibo": {"zh": "微博热搜", "en": "Weibo Hot Search", "tag": "微博"},
+  "zhihu": {"zh": "知乎热榜", "en": "Zhihu Hot List", "tag": "知乎"},
+  "bilibili": {"zh": "B站热门", "en": "Bilibili Popular", "tag": "B站"},
+  "baidu": {"zh": "百度热搜", "en": "Baidu Hot Search", "tag": "百度"},
+  "toutiao": {"zh": "头条热榜", "en": "Toutiao Hot Board", "tag": "头条"},
+  "douyin": {"zh": "抖音热点", "en": "Douyin Hot Search", "tag": "抖音"},
+  "tieba": {"zh": "贴吧热议", "en": "Tieba Hot Topics", "tag": "贴吧"},
+  "juejin": {"zh": "掘金热榜", "en": "Juejin Hot Articles", "tag": "掘金"}
+}

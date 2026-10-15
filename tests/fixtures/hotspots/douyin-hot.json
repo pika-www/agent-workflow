@@ -1,0 +1,21 @@
+{
+  "status_code": 0,
+  "data": {
+    "word_list": [
+      {
+        "word": "国足vs塔吉克斯坦",
+        "sentence_id": "2682945",
+        "hot_value": 12104106,
+        "position": 1,
+        "event_time": 1791256135
+      },
+      {
+        "word": "下次回来就是2027年了",
+        "sentence_id": "2683139",
+        "hot_value": 11933316,
+        "position": 2,
+        "event_time": 1791266488
+      }
+    ]
+  }
+}

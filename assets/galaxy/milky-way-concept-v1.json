@@ -1,0 +1,10 @@
+{
+  "path": "/Users/winfield/Documents/ChatGPT/知识库/assets/galaxy/milky-way-concept-v1.png",
+  "width": 1672,
+  "height": 941,
+  "sha256": "4421b0c44f8e1048a2d0024967aed53a5c2da9037a994c53aadaa8c68bcfc9f1",
+  "tool": "built-in image_gen",
+  "type": "galaxy concept art",
+  "use": "visual reference; not applied to the application",
+  "prompt": "Use case: stylized-concept.\nAsset type: a wide cinematic galaxy concept image, a visual reference for a 3D knowledge-universe interface.\nPrimary request: 银河系相关的图片。Create a beautiful, immersive artist's visualization of the Milky Way seen from outside the galaxy.\nScene: vast near-black deep space with a restrained, finely detailed starfield.\nSubject: a majestic barred spiral galaxy, a luminous warm ivory-gold galactic core, layered sweeping blue-white spiral arms with subtle violet nebulae and dark interstellar dust lanes. Millions of individual delicate stars form the arms. Strong three-dimensional volume and depth, physically inspired stellar light, nuanced atmospheric scattering, luminous but not blown out.\nComposition: wide landscape 16:9; entire galaxy visible with generous dark breathing room around it, centered bright core, a graceful slightly oblique bird's-eye perspective so the spiral structure is clearly readable while the galactic disk has visible depth. Several distinct arms extend outward naturally, suggesting branches connected to a central intelligence without drawing any actual diagrams.\nStyle: premium cinematic space art with realistic astrophotography-inspired textures and fine star detail; elegant, calm, grand scale. Restrained deep navy, icy blue, subtle violet, warm gold-white center.\nConstraints: pure galaxy artwork. No text, no labels, no UI, no logos, no watermark, no grid, no drawn node connections, no planets, no spacecraft, no people. Do not depict a black hole ring in place of the galactic core. No dense multicolored rainbow fog."
+}

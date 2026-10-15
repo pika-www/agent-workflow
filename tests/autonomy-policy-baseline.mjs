@@ -1,0 +1,20 @@
+/** Fixed holdout checks. Autonomous upgrades cannot modify this file. */
+import assert from 'node:assert/strict';
+import {queryTerms,cleanQuery,relevance} from '../federation/retrieval.mjs';
+import {rankSources,learningFocus} from '../federation/learning-strategy.mjs';
+import {nextPublicRead} from '../federation/tool-strategy.mjs';
+assert(queryTerms('怎么赚钱').some(t=>t.term==='商业模式'));
+assert(queryTerms('@前端 Agent HTML 表单验证').some(t=>t.term==='HTML'));
+assert(!cleanQuery('@前端 Agent HTML 表单验证').includes('Agent'));
+assert.equal(relevance(new Map(),[]).confidence,'none');
+assert.deepEqual(rankSources(['https://other.org/a','https://docs.python.org/3/','https://other.org/a'],['docs.python.org'],'Python'),['https://docs.python.org/3/','https://other.org/a']);
+assert.deepEqual(rankSources([],[],'empty'),[]);
+assert.equal(learningFocus({description:'前端工程'},{}).scope,'前端工程');
+assert(learningFocus({description:'影视制作'},{last_goal:'镜头',last_success:'2026'}).previous.includes('镜头'));
+assert(queryTerms('').length===0);
+assert(queryTerms('盈利 '.repeat(200)).length<=32);
+assert.equal(nextPublicRead(['web_read','visual_browser','web_search'],[],true),'web_read');
+assert.equal(nextPublicRead(['web_read','visual_browser','web_search'],['web_read'],true),'visual_browser');
+assert.equal(nextPublicRead(['web_read','visual_browser','web_search'],['web_read'],false),'web_search');
+assert.equal(nextPublicRead([],[],true),null);
+console.log('Fixed retrieval and learning policy checks passed.');

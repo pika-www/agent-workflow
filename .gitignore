@@ -1,0 +1,27 @@
+.venv/
+.venv-mcp-hotspots/
+models/
+__pycache__/
+.pytest_cache/
+data/
+inbox/
+*.log
+.env
+.env.*
+*.env
+!.env.example
+!*.env.example
+.DS_Store
+test-results/
+openwiki-data/
+openwiki-inbox/
+openwiki-upstream/
+openwiki-tools/node_modules/
+.install-cache/
+openwiki-runtime/
+openwiki-federation/
+# Local verification artifacts, runtime snapshots and downloaded installers
+outputs/
+
+# Project-local platform MCP sources, runtimes and private login state
+.runtime/

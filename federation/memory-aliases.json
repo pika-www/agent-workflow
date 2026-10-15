@@ -1,0 +1,10 @@
+{
+  "login": ["登录", "登陆", "账号认证", "账户认证", "用户认证", "login", "sign in"],
+  "register": ["注册", "创建账号", "创建账户", "registration", "sign up"],
+  "heartbeat": ["心跳", "脉冲", "heartbeat", "pulse"],
+  "context": ["上下文", "context"],
+  "memory": ["长记忆", "短记忆", "长期记忆", "短期记忆", "任务记忆", "项目记忆"],
+  "hotspot": ["热点", "热搜", "热榜", "榜单"],
+  "payment": ["支付", "付款", "payment", "checkout"],
+  "deploy": ["部署", "发布服务", "上线服务", "deployment"]
+}

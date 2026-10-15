@@ -1,0 +1,15 @@
+{
+  "space": "branch-c7a9d975cf3a",
+  "cases": [
+    {"id":"correction","question":"AI 只部分正确时，交互应该如何支持用户纠错？","page":"/topics/ai-interaction-correction.md","live":true},
+    {"id":"workflow","question":"固定工作流和自主 Agent 应该怎样选？延迟与成本有什么取舍？","page":"/topics/ai-workflow-scenario.md"},
+    {"id":"evals","question":"AI 产品效果评估最初需要多少真实失败任务？能力评估和回归评估有什么区别？","page":"/topics/ai-evaluation.md"},
+    {"id":"copilot","question":"GitHub Copilot cloud agent 的计划、代码分支、测试和 PR 怎样支持人工审阅？","page":"/topics/github-copilot.md"},
+    {"id":"khanmigo","question":"Khanmigo 怎样引导学习？对数学能力有什么限制？","page":"/topics/khanmigo-learning.md"},
+    {"id":"metr","question":"METR 2026 年的开发者生产力实验能否可靠估计当前 AI 工具的效果？","page":"/topics/metr-productivity.md","live":true},
+    {"id":"fin","question":"Intercom Fin 的确认解决与推定解决有什么区别？沉默能证明问题已经解决吗？","page":"/topics/intercom-fin.md"},
+    {"id":"notebooklm","question":"NotebookLM 的来源引用能否保证答案一定正确？","page":"/topics/notebooklm.md"},
+    {"id":"retrospective","question":"本知识库产品方向复盘记录了什么用户任务？","page":"/topics/project-retrospective.md"},
+    {"id":"unknown","question":"银杏星球的琥珀猫咖啡馆在 2027 年的秘密中奖号码是多少？","expect_missing":true,"live":true}
+  ]
+}

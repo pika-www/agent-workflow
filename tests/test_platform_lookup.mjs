@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {platformLookup} from '../federation/platform-lookup.mjs';
+import {consultationTools,validateNativeCall} from '../federation/native-agent.mjs';
+const policy={tools_enabled:true,network_allowed:true};
+const q=platformLookup('帮我看看B站上大家对招聘软件的评论',policy);
+assert.equal(q.next({receipts:[],allowed:['platform_tools']}).args.platform,'bilibili');
+assert.equal(q.next({receipts:[{tool:'platform_tools'}],allowed:['platform_tools']}),null);
+assert.equal(platformLookup('你好，今天怎么样',policy),null);
+assert.equal(platformLookup('不联网分析B站这个概念',policy),null);
+assert.equal(platformLookup('抖音评论', {...policy,network_allowed:false}),null);
+assert.equal(platformLookup('比较B站和抖音评论',policy),null,'Multiple platforms are left to the agent');
+assert.ok(consultationTools({executeTool(){},toolPolicy:policy}).includes('platform_read'));
+assert.ok(!consultationTools({executeTool(){},toolPolicy:{...policy,network_allowed:false}}).includes('platform_read'));
+const call={type:'function_call',name:'platform_read',call_id:'p1',arguments:JSON.stringify({platform:'bilibili',tool:'get_comments',arguments:JSON.stringify({oid:2})})};
+assert.equal(validateNativeCall(call,['platform_read']).tool,'get_comments');
+assert.throws(()=>validateNativeCall({...call,arguments:JSON.stringify({platform:'anything',tool:'get_comments',arguments:'{}'})},['platform_read']));
+console.log('Platform routing: explicit reads, ordinary chat, offline and native schema passed.');

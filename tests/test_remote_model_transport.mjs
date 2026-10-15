@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {ipv4FirstLookup,remoteChatOptions} from '../federation/remote-model-transport.mjs';
+const resolve=(options,resolver)=>new Promise((resolve,reject)=>ipv4FirstLookup('model.example',options,(err,...result)=>err?reject(err):resolve(result),resolver));
+let calls=[];
+const result=await resolve({all:true},(host,options,cb)=>{calls.push(options);cb(null,[{address:'192.0.2.1',family:4}]);});
+assert.deepEqual(result[0],[{address:'192.0.2.1',family:4}]);assert.equal(calls.length,1);assert.equal(calls[0].family,4);
+calls=[];
+const fallback=await resolve({all:true},(host,options,cb)=>{calls.push(options);if(options.family===4)cb(Object.assign(new Error('No A'),{code:'ENOTFOUND'}));else cb(null,[{address:'2001:db8::1',family:6}]);});
+assert.equal(calls.length,2);assert.equal(fallback[0][0].family,6);
+assert.deepEqual(remoteChatOptions('http://127.0.0.1:11436/v1'),{});
+const transport=remoteChatOptions('https://model.example/v1');
+assert.throws(()=>transport.fetch('https://different.example/v1/responses',{}),/target mismatch/);
+assert.throws(()=>transport.fetch('https://model.example/admin',{}),/target mismatch/);
+console.log('Remote short-chat transport: A-first lookup, IPv6-only fallback, original-origin confinement and loopback isolation passed.');
